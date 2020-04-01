@@ -230,7 +230,7 @@ int CreateZombifiedProcess(WCHAR *ImagePath)
 			"Remote Entry Point:  0x%X\n",
 			ImagePath,
 			ThreadContext.Eax,
-			BaseAddress);
+			*static_cast<const int*>(BaseAddress));
 
 		success = TRUE;
 
